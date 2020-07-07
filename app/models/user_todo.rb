@@ -1,2 +1,0 @@
-class UserTodo < ApplicationRecord
-end
