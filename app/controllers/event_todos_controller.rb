@@ -1,0 +1,2 @@
+class EventsTodosController < ApplicationController
+end

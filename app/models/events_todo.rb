@@ -1,0 +1,2 @@
+class EventsTodo < ApplicationRecord
+end
