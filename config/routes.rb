@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_todos
   resources :user_events
-  resources :events_todos
   resources :events
   resources :todos
   resources :users
