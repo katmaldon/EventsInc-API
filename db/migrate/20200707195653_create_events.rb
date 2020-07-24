@@ -9,7 +9,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :location
       t.integer :price
       t.string :event_url
-      t.integer :user_id default: null
+      t.integer :user_id
 
       t.timestamps
     end
