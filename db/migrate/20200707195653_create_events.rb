@@ -9,7 +9,8 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :location
       t.integer :price
       t.string :event_url
-      t.integer :user_id
+      t.integer :user_id, null: true
+      t.boolean :favorite, default: false
 
       t.timestamps
     end

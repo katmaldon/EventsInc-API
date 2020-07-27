@@ -9,7 +9,7 @@
 require 'faker'
 
 Event.destroy_all
-Todo.destroy_all
+# Todo.destroy_all
 # User.destroy_all
 
 
@@ -17,73 +17,79 @@ puts "Seeded"
 
 events = Event.create([{
     name: "Elements",
-    event_type: "festival",
     image_url: "https://i.imgur.com/V3WecIN.png",
+    event_type: "festival",
     date: "09/25/2020",
     time: "3pm",
+    location: "Lakewood, PA",
     event_url: "elementsfest.us",
-    ticket: false
+    price: 50
     },
     {
     name: "Deadmau5",
-    event_type: "concert",
     image_url: "https://i.imgur.com/qd4yI0L.png",
+    event_type: "concert",
     date: "08/10/2020",
     time: "10pm",
+    location: "Brooklyn",
     event_url: "deadmau5.com",
-    ticket: true
+    price: 70
     },
     {
     name: "Swanlake",
-    event_type: "ballet",
     image_url: "https://i.imgur.com/buDhJtb.png",
+    event_type: "ballet",
     date: "11/02/2020",
     time: "7pm",
+    location: "NYC",
     event_url: "metopera.org",
-    ticket: true
+    price: 120
     },
     {
     name: "Burning Man",
-    event_type: "not a festival",
     image_url: "https://i.imgur.com/rf8SE4j.png",
+    event_type: "festival",
     date: "08/29/2021",
     time: "8am",
+    location: "Black Rock Desert",
     event_url: "burningman.org",
-    ticket: true
+    price: 495
     },
     {
     name: "Amalfi Coast Trip",
-    event_type: "family vacation",
     image_url: "https://i.imgur.com/snVTPnj.png",
+    event_type: "family vacation",
     date: "07/03/2021",
     time: "4am",
+    location: "Amalfi Coast, Italy",
     event_url: "amalficoast.com",
-    ticket: false
+    price: 950
     },
     {
     name: "St.Barths",
-    event_type: "not a family vacation",
     image_url: "https://i.imgur.com/FLJRgOV.png",
+    event_type: "not a family vacation",
     date: "some day",
     time: "early morning",
+    location: "St.Barths",
     event_url: "st-barths.com",
-    ticket: false
+    price: 2000
     }
 ])
 
-todos = Todo.create([{
-    date: "08/04/2020",
-    item: "pre-order tents and bedding, rent car for Elements"
-    },
-    {
-    date: "09/10/2020",
-    item: "order food and drinks for Elements"
-    },
-    {
-    date: "10/20/2020",
-    item: "reserve restaurant after Swanlake"
-    }
-])
+# todos = Todo.create([{
+#     date: "08/04/2020",
+#     item: "pre-order tents and bedding, rent car for Elements"
+#     },
+#     {
+#     date: "09/10/2020",
+#     item: "order food and drinks for Elements"
+#     },
+#     {
+#     date: "10/20/2020",
+#     item: "reserve restaurant after Swanlake"
+#     }
+# ])
 
 
 
@@ -101,7 +107,7 @@ todos = Todo.create([{
 
 
 
-    # user_events = UserEvent.create([{
+    # favorites = Favorite.create([{
     #     user_id: 1,
     #     event_id: 1
     #     },

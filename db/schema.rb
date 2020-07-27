@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_07_23_213035) do
     t.integer "price"
     t.string "event_url"
     t.integer "user_id"
+    t.boolean "favorite", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
