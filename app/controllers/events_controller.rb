@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-    before_action :find_event, only: [:show, :destroy]
+    before_action :find_event, only: [:show, :destroy, :update]
 
     def index
         @events = Event.all
@@ -33,10 +33,15 @@ class EventsController < ApplicationController
         render json: @events
     end
 
+    def update
+        @event.update(event_params)
+        render json: @event
+    end
     private
 
     def event_params
-        params.require(:event).permit(:name, :event_type, :image_url, :date, :time, :event_url, :ticket)
+        params.require(:event).permit!
+        # (:name, :event_type, :image_url, :date, :time, :event_url, :ticket, :favorite)
     end
 
     def find_event
