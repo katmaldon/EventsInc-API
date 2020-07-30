@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
     def create
         @event = Event.create(event_params)
-        @event.user_id = current_user.id
+        #@event.user_id = current_user.id
         # if event.valid?
         #     session[:event_id] = event.id
         #     redirect_to event_path(event)
@@ -36,13 +36,13 @@ class EventsController < ApplicationController
 
     def update
         @event.update(event_params)
-        if event.user_id == current_user.id
-            event.destroy
-            flash[:errors] = ["Your event has been removed."]
-            redirect_to events_url
-          else
-            flash[:errors] = ["You can only remove an event you created."]
-            redirect_to events_url
+        # if event.user_id == current_user.id
+        #     event.destroy
+        #     flash[:errors] = ["Your event has been removed."]
+        #     redirect_to events_url
+        #   else
+        #     flash[:errors] = ["You can only remove an event you created."]
+        #     redirect_to events_url
         render json: @event
     end
 
