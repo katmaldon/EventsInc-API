@@ -10,22 +10,12 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
-        # if User.valid?
-        #     session[:user_id] = User.id
-        #     redirect_to user_path(user)
-        # else
-        #     flash[:errors] = User.errors.full_messages
-        #     redirect_to new_user_path
-        # end
-
-        if @user.save
-            login!(@user)
-            redirect_to user_path(@user)
+        if User.valid?
+            render json: { user:
+            UserSerializer.new(@user) }, status: :created
         else
-            flash.now[:errors] = @user.errors.full_messages
-            redirect_to events_path
+          render json: { error: 'failed to create user' }, status: :not_acceptable
         end
-    render json: @user
     end
 
     def index
@@ -37,8 +27,6 @@ class UsersController < ApplicationController
         render json: @user
     end
 
-
-
     def destroy
         @user.destroy
         render json: @users
@@ -47,7 +35,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :age, :location, :bio, :interests, :image_url)
+        params.require(:user).permit(:name, :password, :age, :location, :bio, :image_url)
     end
 
     def find_user
