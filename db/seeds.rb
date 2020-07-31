@@ -145,7 +145,7 @@ todos = Todo.create([{
     },
     {
     date: "09/10/2020",
-    item: "order food and drinks for Elements"
+    item: "order food and drinks for Elements",
     completed: false
     },
     {
@@ -158,15 +158,15 @@ todos = Todo.create([{
 
 
 
-User.create(
+user = User.create([{
     name: "Kat",
-    password_digest: "123"
+    password_digest: "123",
     age: 35,
-    location: Brooklyn, NY,
-    bio: "Quarantined but uncontained adventurer. Creature of havoc. Jack of all trades, master of some."
+    location: "Brooklyn, NY",
+    bio: "Quarantined but uncontained adventurer. Creature of havoc. Jack of all trades, master of some.",
     image_url: "https://i.imgur.com/td8DG0k.jpg?1"
-    )
-end
+}])
+
 
 
 
