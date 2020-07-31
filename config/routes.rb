@@ -5,6 +5,8 @@ resources :user_events
 resources :events
 resources :todos
 
+root 'auth#login'
+
 namespace :api do
     namespace :v1 do
 

@@ -18,7 +18,7 @@ puts "Seeded"
 events = Event.create([{
     name: "Elements",
     image_url: "https://i.imgur.com/V3WecIN.png",
-    event_type: "festival",
+    event_type: "Festival",
     date: "09/25/2020",
     time: "3pm",
     location: "Lakewood, PA",
@@ -28,7 +28,7 @@ events = Event.create([{
     {
     name: "Deadmau5",
     image_url: "https://i.imgur.com/qd4yI0L.png",
-    event_type: "concert",
+    event_type: "Concert",
     date: "08/10/2020",
     time: "10pm",
     location: "Brooklyn",
@@ -38,7 +38,7 @@ events = Event.create([{
     {
     name: "Swanlake",
     image_url: "https://i.imgur.com/buDhJtb.png",
-    event_type: "ballet",
+    event_type: "Ballet",
     date: "11/02/2020",
     time: "7pm",
     location: "NYC",
@@ -48,7 +48,7 @@ events = Event.create([{
     {
     name: "Burning Man",
     image_url: "https://i.imgur.com/rf8SE4j.png",
-    event_type: "festival",
+    event_type: "Festival",
     date: "08/29/2021",
     time: "8am",
     location: "Black Rock Desert",
@@ -56,9 +56,9 @@ events = Event.create([{
     price: 495
     },
     {
-    name: "Amalfi Coast Trip",
+    name: "Amalfi Coast",
     image_url: "https://i.imgur.com/snVTPnj.png",
-    event_type: "vacation",
+    event_type: "Vacation",
     date: "07/03/2021",
     time: "4am",
     location: "Amalfi Coast, Italy",
@@ -68,7 +68,7 @@ events = Event.create([{
     {
     name: "St.Barths",
     image_url: "https://i.imgur.com/FLJRgOV.png",
-    event_type: "vacation",
+    event_type: "Vacation",
     date: "some day",
     time: "early morning",
     location: "St.Barths",
@@ -78,7 +78,7 @@ events = Event.create([{
     {
     name: "chkchkchk !!!",
     image_url: "https://i.imgur.com/Zx4cLoi.jpg",
-    event_type: "concert",
+    event_type: "Concert",
     date: "11/26/2021",
     time: "9pm",
     location: "Brooklyn, NY",
@@ -87,18 +87,18 @@ events = Event.create([{
     },
     {
     name: "Columbia Lightweight Rowing",
-    image_url: "https://i.imgur.com/8iCpeAP.jpg",
+    image_url: "https://i.imgur.com/8iCpeAP.jpg?1",
     event_type: "sports",
     date: "10/20/2021",
     time: "10am",
     location: "Boston",
-    event_url: "columbia.edu",
+    event_url: "colombia.edu",
     price: 20
     },
     {
-    name: "Potato Cult Meeting",
-    image_url: "https://i.imgur.com/KVJwlxA.png",
-    event_type: "Cult Meeting",
+    name: "Potato Cult Mtg",
+    image_url: "https://i.imgur.com/KVJwlxA.png?1",
+    event_type: "Cult",
     date: "11/11/2020",
     time: "dusk",
     location: "Prospect Park",
@@ -108,7 +108,7 @@ events = Event.create([{
     {
     name: "FIFA World Cup",
     image_url: "https://i.imgur.com/OclySOi.png",
-    event_type: "sports",
+    event_type: "Sports",
     date: "Summer 2026",
     time: "tbd",
     location: "USA",
@@ -118,7 +118,7 @@ events = Event.create([{
     {
     name: "NBA Playoffs",
     image_url: "https://i.imgur.com/h3KkRwP.jpg",
-    event_type: "sports",
+    event_type: "Sports",
     date: "03/15/2021",
     time: "6pm",
     location: "Los Angeles",
@@ -128,7 +128,7 @@ events = Event.create([{
     {
     name: "Hamilton",
     image_url: "https://i.imgur.com/3l4Bzvi.jpg",
-    event_type: "musical",
+    event_type: "Musical",
     date: "4/20/2021",
     time: "8pm",
     location: "NYC",
@@ -154,16 +154,16 @@ events = Event.create([{
 
 
 
-    # 3.times do
-    #     User.create(
-    #         name: Faker::Name.unique.name,
-    #         password_digest: "123"
-    #         age: Faker::Number.number(digits: 2),
-    #         location: Faker::Address.city,
-    #         bio: Faker::TvShows::SiliconValley.unique.quote,
-    #         image_url: "https://www.getaway.co.za/wp-content/uploads/2020/03/Baby-sloth.png"
-    #     )
-    # end
+
+User.create(
+    name: "Kat",
+    password_digest: "123"
+    age: 35,
+    location: Brooklyn, NY,
+    bio: "Quarantined but uncontained adventurer. Creature of havoc. Jack of all trades, master of some."
+    image_url: "https://i.imgur.com/td8DG0k.jpg?1"
+    )
+end
 
 
 
