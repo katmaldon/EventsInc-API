@@ -76,7 +76,7 @@ events = Event.create([{
     price: 2000
     },
     {
-    name: "chkchkchk",
+    name: "chkchkchk !!!",
     image_url: "https://i.imgur.com/Zx4cLoi.jpg",
     event_type: "concert",
     date: "11/26/2021",
