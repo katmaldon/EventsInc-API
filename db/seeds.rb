@@ -9,8 +9,8 @@
 require 'faker'
 
 Event.destroy_all
-# Todo.destroy_all
-# User.destroy_all
+Todo.destroy_all
+User.destroy_all
 
 
 puts "Seeded"
@@ -138,19 +138,22 @@ events = Event.create([{
 
 ])
 
-# todos = Todo.create([{
-    #     date: "08/04/2020",
-    #     item: "pre-order tents and bedding, rent car for Elements"
-    #     },
-    #     {
-        #     date: "09/10/2020",
-        #     item: "order food and drinks for Elements"
-        #     },
-        #     {
-#     date: "10/20/2020",
-#     item: "reserve restaurant after Swanlake"
-#     }
-# ])
+todos = Todo.create([{
+    date: "08/04/2020",
+    item: "pre-order tents and bedding, rent car for Elements",
+    completed: false
+    },
+    {
+    date: "09/10/2020",
+    item: "order food and drinks for Elements"
+    completed: false
+    },
+    {
+    date: "10/20/2020",
+    item: "reserve restaurant after Swanlake",
+    completed: false
+    }
+])
 
 
 
